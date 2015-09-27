@@ -2,14 +2,20 @@
 import React from 'react'
 import { Router } from 'react-router'
 import Index from './pages/index.jsx'
+import { createHistory, useBasename } from 'history'
+
+const history = useBasename(createHistory)({
+  basename: '/public'
+})
 
 const rootRoute = {
   component: 'div',
   childRoutes: [ {
     path: '/',
-    // component: Index,
+    component: Index,
     childRoutes: [
-      route('chapter-1')
+      route('chapter-1'),
+      route('chapter-2'),
     ]
   } ]
 }
@@ -26,7 +32,7 @@ function route(fileName) {
 }
 
 React.render(
-  <Router routes={rootRoute} />,
+  <Router history={history} routes={rootRoute} />,
   document.getElementById('main')
 )
 
