@@ -4,10 +4,6 @@ import { Router } from 'react-router'
 import MainLayout from './main-layout.jsx'
 import { createHistory, useBasename } from 'history'
 
-const history = useBasename(createHistory)({
-  basename: '/public'
-})
-
 const rootRoute = {
   component: 'div',
   childRoutes: [ {
@@ -32,6 +28,6 @@ function route(fileName) {
 }
 
 React.render(
-  <Router history={history} routes={rootRoute} />,
+  <Router history={createHistory()} routes={rootRoute} />,
   document.getElementById('main')
 )

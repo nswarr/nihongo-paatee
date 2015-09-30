@@ -1,12 +1,12 @@
 webpackJsonp([1],{
 
-/***/ 228:
+/***/ 229:
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./chapter-1.jsx": 229,
-		"./chapter-2.jsx": 230,
-		"./index.jsx": 199
+		"./chapter-1.jsx": 230,
+		"./chapter-2.jsx": 231,
+		"./index.jsx": 200
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -19,12 +19,12 @@ webpackJsonp([1],{
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 228;
+	webpackContext.id = 229;
 
 
 /***/ },
 
-/***/ 229:
+/***/ 230:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56,7 +56,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 230:
+/***/ 231:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
