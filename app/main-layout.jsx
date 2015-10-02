@@ -1,9 +1,17 @@
 import React from 'react'
-import Index from './pages/index.jsx'
+import { Link } from 'react-router'
 
 const MainLayout = React.createClass({
   render () {
-    return this.props.children || <Index />
+    if(this.props.children) {
+      return this.props.children;
+    }
+
+    return (
+      <div>
+        <Link to="/lesson-3">Lesson 3 - Time</Link>
+      </div>
+    )
   }
 })
 

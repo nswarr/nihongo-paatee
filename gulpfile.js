@@ -51,7 +51,7 @@ gulp.task('server', ['build', 'watch'], function () {
     server.notify.call(server, event);
   });
 
-  watch(['server.js', 'lib/**/*.js', envVarsPath], function() {
+  watch(['server.js', 'lib/**/*.js'], function() {
     server.start.apply(server);
   });
 });
