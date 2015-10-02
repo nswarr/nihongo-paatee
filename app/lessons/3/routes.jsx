@@ -1,5 +1,3 @@
-//import { asyncRoute } from '../../util'
-
 const route = {
   path: 'lesson-3',
   getComponent: function(location, cb, childRoutes) {

@@ -1,8 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const Index = React.createClass({
   render () {
-    return this.props.children || <h1>HUZZAH</h1>
+    if(this.props.children) {
+      return this.props.children;
+    }
+
+    return (
+      <div>
+        <Link to="/lesson-3/what-time-is-it">Lesson 3 - Time</Link>
+      </div>
+    )
   }
 })
 
