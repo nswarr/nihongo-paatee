@@ -29,7 +29,7 @@ const WhatTimeIsIt = React.createClass({
         <div className="col-md-6">
           <h3>What time is it?</h3>
           <p>{this.state.time}</p>
-          <button onClick={this.generateTime}>Generate again</button>
+          <button onClick={this.generateTime}>Mo Ichido</button>
         </div>
       </div>
     )
