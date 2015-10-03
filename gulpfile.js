@@ -23,15 +23,20 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('public/css/'));
 });
 
-gulp.task("vendor", ['concat-vendor-js']);
+gulp.task("vendor", ['concat-vendor-css', 'concat-vendor-js']);
+
+gulp.task("concat-vendor-css", function() {
+  return gulp.src([
+      'vendor/bootstrap-4-alpha/bootstrap.css'
+    ])
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('public/css'));
+});
+
 
 gulp.task("concat-vendor-js", function() {
   return gulp.src([
-      'vendor/jquery-1.11.3.min.js',
-      'vendor/bootstrap-custom/js/bootstrap.js',
-      'vendor/bootstrap-datepicker/bootstrap-datepicker.js',
-      'vendor/typeahead.bundle.js',
-      'vendor/parsley.js'
+      'vendor/bootstrap-4-alpha/bootstrap.js'
     ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('public/js'));
