@@ -2,7 +2,9 @@
 import React from 'react'
 import { Router } from 'react-router'
 import MainLayout from './main-layout.jsx'
-import { createHistory, useBasename } from 'history'
+import createBrowserHistory from 'history/lib/createBrowserHistory'
+
+const history = createBrowserHistory({queryKey: false})
 
 const rootRoute = {
   component: 'div',
@@ -14,6 +16,6 @@ const rootRoute = {
 }
 
 React.render(
-  <Router history={createHistory()} routes={rootRoute} />,
+  <Router history={history} routes={rootRoute} />,
   document.getElementById('main')
 )

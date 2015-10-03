@@ -1,15 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router'
+import LessonSelect from './components/lesson-select.jsx'
 
 const MainLayout = React.createClass({
   render () {
-    if(this.props.children) {
-      return this.props.children;
-    }
-
     return (
       <div>
-        <Link to="/lesson-3">Lesson 3 - Time</Link>
+        <header className="container">
+
+          <div className="col-md-4">
+              <h2>Nihongo PaaTee</h2>
+          </div>
+
+          <div className="col-md-4">
+              <LessonSelect />
+          </div>
+        </header>
+
+        {this.props.children}
+
+
       </div>
     )
   }

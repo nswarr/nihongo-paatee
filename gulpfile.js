@@ -17,7 +17,7 @@ gulp.task("build-app", function() {
 });
 
 gulp.task('styles', function () {
-  return gulp.src('app/sass/**/*.scss')
+  return gulp.src('app/styles/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('public/css/'));

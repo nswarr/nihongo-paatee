@@ -25,10 +25,12 @@ const WhatTimeIsIt = React.createClass({
   },
   render () {
     return (
-      <div>
-        <h1>What time is it?</h1>
-        <p>{this.state.time}</p>
-        <button onClick={this.generateTime}>Generate again</button>
+      <div className="row">
+        <div className="col-md-6">
+          <h3>What time is it?</h3>
+          <p>{this.state.time}</p>
+          <button onClick={this.generateTime}>Generate again</button>
+        </div>
       </div>
     )
   },
