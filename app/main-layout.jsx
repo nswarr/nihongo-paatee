@@ -7,13 +7,14 @@ const MainLayout = React.createClass({
     return (
       <div>
         <header className="container">
+          <div className="row">
+            <div className="col-md-4">
+                <h2>Nihongo PaaTee</h2>
+            </div>
 
-          <div className="col-md-4">
-              <h2>Nihongo PaaTee</h2>
-          </div>
-
-          <div className="col-md-4">
-              <LessonSelect />
+            <div className="col-md-4">
+                <LessonSelect />
+            </div>
           </div>
         </header>
 
