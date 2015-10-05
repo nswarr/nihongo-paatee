@@ -44,7 +44,7 @@ gulp.task("concat-vendor-js", function() {
 
 gulp.task('watch', function(){
   watch(['app/**/*.js*'], run('build-app'));
-  watch(['app/sass/**/*.scss'], run('styles'));
+  watch(['app/styles/**/*.scss'], run('styles'));
   watch(['vendor/**/*.*'], run('vendor'));
 });
 

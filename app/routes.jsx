@@ -2,9 +2,9 @@
 import React from 'react'
 import { Router } from 'react-router'
 import MainLayout from './main-layout.jsx'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import createHashHistory from 'history/lib/createHashHistory'
 
-const history = createBrowserHistory({queryKey: false})
+const history = createHashHistory({queryKey: false})
 
 const rootRoute = {
   component: 'div',
