@@ -58,7 +58,7 @@ const WhatTimeIsIt = React.createClass({
 
     const minuesMap = {
       1 : 'ippun',
-      2 : 'nippun',
+      2 : 'nifun',
       3 : 'sanpun',
       4 : 'yoppun',
       5 : 'gofun',
