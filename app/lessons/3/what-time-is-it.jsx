@@ -1,46 +1,69 @@
 import React from 'react'
 const audioPath = '../audio/lessons/3/'
 
-var question = new Audio(`${audioPath}what-time-is-it.mp3`);
-
 const WhatTimeIsIt = React.createClass({
   getInitialState(){
     return {
       minutes: null,
       hours: null,
-      started: false
+      answer: null
     }
+  },
+  componentDidMount() {
+    this.generateRandomTime()
   },
   render () {
     const me = this.state
-    let buttons = <button className="btn" onClick={this.start}>Start</button>
-    if(me.started) {
-      buttons = (
-        <div>
-          <button className="btn" onClick={this.speakTime}>Play time</button>
-          <button className="btn" onClick={this.generateTime}>New Time</button>
+
+    let buttons = []
+
+    if(me.answer){
+      buttons.push(<button className="btn" onClick={this.generateRandomTime}>Mo ichido</button>)
+    } else {
+      buttons.push(<button className="btn" onClick={this.showAnswer}>Show Answer</button>)
+    }
+
+    if(me.hours){
+      var time = `${me.hours}:`
+      if(me.minutes < 10) {
+        time += `0`
+      }
+      time += `${me.minutes}`
+    }
+
+    if(me.answer) {
+      var answer = (
+        <div className="row">
+          <div className="col-md-6">
+            {me.answer}
+          </div>
         </div>
       )
     }
 
-
-    let time = `${me.hours}:`
-    if(me.minutes < 10) {
-      time += `0`
-    }
-    time += `${me.minutes}`
-
     return (
-      <div className="row">
-        <div className="col-md-6">
-          <h3>What time is it?</h3>
-          <p>{time}</p>
-          {buttons}
+      <div>
+        <div className="row">
+          <div className="col-md-9">
+            <h3>What time is it?</h3>
+            Say the time below
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-9 digital-clock">
+            {time}
+          </div>
+        </div>
+        {answer}
+        <div className="row">
+          <div className="col-md-9">
+            {buttons}
+          </div>
         </div>
       </div>
     )
   },
-  speakTime() {
+  showAnswer() {
     const hoursMap = {
       1 : 'ichiji',
       2 : 'niji',
@@ -77,41 +100,24 @@ const WhatTimeIsIt = React.createClass({
       50 : "gojuu",
     }
 
-    let minutesAudio = []
+    let timeText = [hoursMap[this.state.hours]]
+
     if(this.state.minutes < 11) {
-      minutesAudio.push(`${audioPath}${minuesMap[this.state.minutes]}`)
+      timeText.push(minuesMap[this.state.minutes])
     } else {
-      minutesAudio.push(`${audioPath}${tensMap[this.state.minutes - (this.state.minutes % 10)]}`)
-      minutesAudio.push(`${audioPath}${minuesMap[this.state.minutes % 10]}`)
+      timeText.push(tensMap[this.state.minutes - (this.state.minutes % 10)])
+      timeText.push(minuesMap[this.state.minutes % 10])
     }
 
-    let audio = new Audio(`${audioPath}${hoursMap[this.state.hours]}.mp3`)
-    let index = 0
-
-    audio.load()
-    audio.play()
-    audio.addEventListener('ended',function(){
-      if(index < minutesAudio.length){
-        audio.src = `${minutesAudio[index]}.mp3`
-        audio.pause()
-        audio.load()
-        audio.play()
-        index += 1
-      }
+    this.setState({
+      answer: timeText.join(' ')
     })
-  },
-  start() {
-    this.setState({started: true})
-    this.generateTime()
-  },
-  generateTime() {
-    question.play()
-    this.generateRandomTime()
   },
   generateRandomTime() {
     this.setState({
       hours: this.getRandomNumber(1, 13),
-      minutes: this.getRandomNumber(1, 60)
+      minutes: this.getRandomNumber(1, 60),
+      answer: null
     })
   },
   getRandomNumber(lower, upper) {

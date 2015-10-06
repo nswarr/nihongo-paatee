@@ -15,9 +15,6 @@ const Index = React.createClass({
             {this.props.children}
           </div>
         </div>
-
-
-
       </div>
     )
   }
