@@ -9,7 +9,7 @@ const Index = React.createClass({
         <div className="row">
           <div className="col-md-2 practice-menu">
             <h4>Practice</h4>
-            <Link to="/lesson-3/what-time-is-it">What time is it?</Link>
+            <Link to="/lesson-3/what-time-is-it">いま　なんじ　ですか</Link>
           </div>
           <div className="col-md-offset-1 col-md-9">
             {this.props.children}

@@ -9,7 +9,7 @@ const MainLayout = React.createClass({
         <header className="container">
           <div className="row">
             <div className="col-md-4">
-                <h2>Nihongo PaaTee</h2>
+                <h2>日本語 パーティー</h2>
             </div>
 
             <div className="col-md-4">
