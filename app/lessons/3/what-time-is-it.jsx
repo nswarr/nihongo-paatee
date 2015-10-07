@@ -80,8 +80,8 @@ const WhatTimeIsIt = React.createClass({
   },
   generateRandomTime() {
     this.setState({
-      hours: getRandomNumber(1, 13),
-      minutes: getRandomNumber(1, 60),
+      hours: getRandomNumber(1, 12),
+      minutes: getRandomNumber(1, 59),
       answer: null
     })
   }

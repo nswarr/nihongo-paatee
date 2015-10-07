@@ -12,6 +12,13 @@ const route = {
         cb(null, require(`./what-time-is-it.jsx`))
       })
     }
+  },{
+    path: 'when-does-x-start-end',
+    getComponent: function(location, cb, childRoutes) {
+      require.ensure([], (require) => {
+        cb(null, require(`./when-does-x-start-end.jsx`))
+      })
+    }
   }]
 }
 
