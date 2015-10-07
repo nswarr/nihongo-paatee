@@ -1,9 +1,9 @@
 export const events = [
-  'ひるやすみ',
-  'えいが',
-  'しごと',
-  'かいぎ',
-  'パーティー',
+  {name: 'ひるやすみ', image: 'hiruyasumi.jpg'},
+  {name: 'えいが', image: 'eiga.jpg'},
+  {name: 'しごと', image: 'shigoto.jpg'},
+  {name: 'かいぎ', image: 'kaigi.jpg'},
+  {name: 'パーティー', image: 'paatee.jpg'}
 ]
 
 export const places = [
