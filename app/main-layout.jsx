@@ -19,7 +19,7 @@ const MainLayout = React.createClass({
         </header>
 
         {this.props.children}
-        
+
       </div>
     )
   }

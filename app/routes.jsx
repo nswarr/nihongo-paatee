@@ -11,7 +11,10 @@ const rootRoute = {
   childRoutes: [{
     path: '/',
     component: MainLayout,
-    childRoutes: [require('./lessons/3/routes.jsx')]
+    childRoutes: [
+      require('./lessons/3/routes.jsx'),
+      require('./lessons/6/routes.jsx')
+    ]
   }]
 }
 

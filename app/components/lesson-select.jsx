@@ -11,6 +11,7 @@ const LessonSelect = React.createClass({
       <select onChange={this.goToLesson}>
         <option value="">Choose a lesson</option>
         <option value="3">Lesson 3</option>
+        <option value="6">Lesson 6</option>
       </select>
     )
   }
