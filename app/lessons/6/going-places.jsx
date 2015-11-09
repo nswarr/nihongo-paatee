@@ -48,7 +48,7 @@ const GoingPlaces = React.createClass({
     var places = [
       'Osaka Office',
       'Tokyo Station',
-      'Narita Airpor',
+      'Narita Airport',
       'Kyoto Branch Office',
       'Ueno Park',
       "Friend's house"
