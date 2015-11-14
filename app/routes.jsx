@@ -7,15 +7,19 @@ import createHashHistory from 'history/lib/createHashHistory'
 const history = createHashHistory({queryKey: false})
 
 const rootRoute = {
-  component: 'div',
-  childRoutes: [{
-    path: '/',
-    component: MainLayout,
-    childRoutes: [
-      require('./lessons/3/routes.jsx'),
-      require('./lessons/6/routes.jsx')
-    ]
-  }]
+  path: '/',
+  component: MainLayout,
+  childRoutes: [
+    require('./lessons/3/routes.jsx'),
+    require('./lessons/6/routes.jsx'), {
+      path: 'lesson-7',
+      getComponent: function(location, cb) {
+        require.ensure([], (require) => {
+          cb(null, require(`./lessons/7/index.jsx`))
+        })
+      }
+    }
+  ]
 }
 
 React.render(

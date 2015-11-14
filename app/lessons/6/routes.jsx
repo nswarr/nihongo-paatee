@@ -1,13 +1,13 @@
-  const route = {
-    path: 'lesson-6',
-    getComponent: function(location, cb, childRoutes) {
-      require.ensure([], (require) => {
-        cb(null, require(`./index.jsx`))
-      })
-    },
+const route = {
+  path: 'lesson-6',
+  getComponent: function(location, cb) {
+    require.ensure([], (require) => {
+      cb(null, require(`./index.jsx`))
+    })
+  },
   childRoutes: [{
     path: 'going-places',
-    getComponent: function(location, cb, childRoutes) {
+    getComponent: function(location, cb) {
       require.ensure([], (require) => {
         cb(null, require(`./going-places.jsx`))
       })

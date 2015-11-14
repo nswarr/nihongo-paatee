@@ -8,7 +8,7 @@ const Word = React.createClass({
 
   toggleNihongo() {
     this.setState({showNihongo: !this.state.showNihongo});
-  }
+  },
 
   render () {
 
