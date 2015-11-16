@@ -35,7 +35,6 @@ const WhenIsEvent = React.createClass({
     }
 
 
-
     return (
       <div>
         <h2 className="lesson-title">State when the event occurs</h2>

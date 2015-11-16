@@ -1,24 +1,26 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 const LessonPage = React.createClass({
   getInitialState() {
     return {
-      content: <span>Pick something to practice</span>
+      selectedPracticeIndex: 0
     };
   },
 
   render () {
     let links = [];
 
-    this.props.lessons.forEach((lesson) =>{
+    this.props.lessons.forEach((lesson, i) =>{
       var clicky = (e) => {
         e.preventDefault()
-        this.setState({content: <lesson.component />})
+        this.setState({currentPractice: i})
       }
 
       links.push(<a href="" onClick={clicky}>{lesson.name}</a>)
       links.push(<br />)
     });
+
+    var Practice = this.props.lessons[this.state.selectedPracticeIndex].component;
 
     return (
       <div className="container">
@@ -28,7 +30,7 @@ const LessonPage = React.createClass({
             {links}
           </div>
           <div className="col-md-offset-1 col-md-9">
-            {this.state.content}
+            <Practice />
           </div>
         </div>
       </div>

@@ -1,15 +1,15 @@
 import React, { PropTypes } from 'react'
 
 const Word = React.createClass({
-
   getInitialState() {
     return { showNihongo: false }
   },
-
   toggleNihongo() {
     this.setState({showNihongo: !this.state.showNihongo});
   },
-
+  componentWillReceiveProps() {
+    this.setState({showNihongo: false});
+  },
   render () {
     let word = this.props.word;
 
