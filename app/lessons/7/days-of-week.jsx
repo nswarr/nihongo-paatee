@@ -1,7 +1,7 @@
 import React from 'react'
 import { DaysOfWeek } from '../../vocab/dates.js'
 import { pickRandomItem } from '../../lib/rando'
-import Word from '../../components/word.jsx'
+import VocabWord from '../../components/vocab-word.jsx'
 
 
 const DaysOfTheWeek = React.createClass({
@@ -19,7 +19,7 @@ const DaysOfTheWeek = React.createClass({
         <h2 className="practice-title">Name the days of the week</h2>
         <div className="row">
           <div className="vocab-box">
-            <Word word={dayOfWeek} />
+            <VocabWord word={dayOfWeek} />
           </div>
         </div>
         <button className="btn" onClick={this.again}>もいちど</button>

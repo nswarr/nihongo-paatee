@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
-const Word = React.createClass({
+const VocabWord = React.createClass({
   getInitialState() {
     return { showNihongo: false }
   },
@@ -23,4 +23,4 @@ const Word = React.createClass({
   }
 })
 
-export default Word
+export default VocabWord
