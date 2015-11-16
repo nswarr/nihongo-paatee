@@ -13,11 +13,24 @@ header {
   margin-right: 1em;
 }
 
-.lesson-title {
+.row {
+  margin: 1em 0;
+}
+
+.practice-title {
   margin-bottom: 1em;
 }
 
-.box-section {
+.vocab-word {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.vocab-box {
   display: inline-block;
-  margin-left: 1em;
+  margin-right: 1em;
+
+  h4 {
+    border-bottom: 1px solid lightgrey;
+  }
 }

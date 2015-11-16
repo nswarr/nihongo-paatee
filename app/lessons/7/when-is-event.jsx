@@ -37,16 +37,18 @@ const WhenIsEvent = React.createClass({
 
     return (
       <div>
-        <h2 className="lesson-title">State when the event occurs</h2>
-        <div className="box-section">
-          <h4>Event</h4>
-          <Word word={event} />
+        <h2 className="practice-title">State when the event occurs</h2>
+        <div className="row">
+          <div className="vocab-box">
+            <h4>Event</h4>
+            <Word word={event} />
+          </div>
+          <div className="vocab-box">
+            <h4>{whenText}</h4>
+            <Word word={when} />
+          </div>
         </div>
-        <div className="box-section">
-          <h4>{whenText}</h4>
-          <Word word={when} />
-        </div>
-        <br />
+
         <button className="btn" onClick={this.again}>もいちど</button>
       </div>
     )

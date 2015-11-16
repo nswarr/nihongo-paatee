@@ -14,7 +14,11 @@ const Word = React.createClass({
     let word = this.props.word;
 
     return (
-      <span onClick={this.toggleNihongo}>{this.state.showNihongo ? word.nihongo : word.english}</span>
+      <span
+        className="vocab-word"
+        title="Click to see translation"
+        onClick={this.toggleNihongo}>{this.state.showNihongo ? word.nihongo : word.english}
+      </span>
     )
   }
 })

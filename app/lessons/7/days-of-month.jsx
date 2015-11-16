@@ -23,15 +23,16 @@ const DaysOfTheMonth = React.createClass({
 
     return (
       <div>
-        <h2 className="lesson-title">Name the days of the month</h2>
+        <h2 className="practice-title">Name the day of the month</h2>
+        <div className="row">
+          <div className="vocab-box">
+            <Word word={dayOfMonth} />
+          </div>
+        </div>
+        <button className="btn" onClick={this.again}>もいちど</button>
         <label>
             <input type="checkbox" value={this.state.isFirstTen} onChange={this.toggleFirstTen} /> First 10 days only
         </label>
-        <div className="box-section">
-          <Word word={dayOfMonth} />
-        </div>
-        <br />
-        <button className="btn" onClick={this.again}>もいちど</button>
       </div>
     )
   }

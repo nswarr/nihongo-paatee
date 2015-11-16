@@ -16,12 +16,12 @@ const DaysOfTheWeek = React.createClass({
 
     return (
       <div>
-        <h2 className="lesson-title">Name the days of the week</h2>
-        <div className="box-section">
-          <Word word={dayOfWeek} />
+        <h2 className="practice-title">Name the days of the week</h2>
+        <div className="row">
+          <div className="vocab-box">
+            <Word word={dayOfWeek} />
+          </div>
         </div>
-
-        <br />
         <button className="btn" onClick={this.again}>もいちど</button>
       </div>
     )

@@ -10,13 +10,13 @@ const LessonPage = React.createClass({
   render () {
     let links = [];
 
-    this.props.lessons.forEach((lesson, i) =>{
+    this.props.lessons.forEach((lesson, i) => {
       var clicky = (e) => {
         e.preventDefault()
-        this.setState({currentPractice: i})
+        this.setState({selectedPracticeIndex: i})
       }
 
-      links.push(<a href="" onClick={clicky}>{lesson.name}</a>)
+      links.push(<a key={lesson.name} href="" onClick={clicky}>{lesson.name}</a>)
       links.push(<br />)
     });
 
