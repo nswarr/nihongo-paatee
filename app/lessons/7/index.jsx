@@ -5,7 +5,7 @@ const Index = React.createClass({
   render () {
 
     let practice = [
-      {name: 'test', component: require('./my-file.jsx')}
+      {name: 'When is event?', component: require('./when-is-event.jsx')}
     ]
 
     return (

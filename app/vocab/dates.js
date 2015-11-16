@@ -1,4 +1,4 @@
-import Word from '../../lib/word'
+import Word from '../lib/word'
 
 export const DaysOfWeek = [
   new Word("Monday", "げつ ようび"),
@@ -8,21 +8,6 @@ export const DaysOfWeek = [
   new Word("Friday", "きん ようび"),
   new Word("Saturday", "ど ようび"),
   new Word("Sunday", "にち ようび")
-]
-
-export const Months = [
-  new Word("January", "iち がつ"),
-  new Word("February", "に がつ"),
-  new Word("March", "さん がつ"),
-  new Word("April", "し がつ"),
-  new Word("May", "ご がつ"),
-  new Word("June", "ろく がつ"),
-  new Word("July", "しち がつ"),
-  new Word("August", "はち がつ"),
-  new Word("September", "く がつ"),
-  new Word("October", "じゅう がつ"),
-  new Word("November", "じゅういち がつ"),
-  new Word("December", "じゅうに がつ"),
 ]
 
 export const DaysOfMonth = [
@@ -57,4 +42,26 @@ export const DaysOfMonth = [
   new Word("29", "にじゅうく にち"),
   new Word("30", "さんじゅう にち"),
   new Word("31", "さんじゅういち にち"),
+]
+
+export const Months = [
+  new Word("January", "iち がつ"),
+  new Word("February", "に がつ"),
+  new Word("March", "さん がつ"),
+  new Word("April", "し がつ"),
+  new Word("May", "ご がつ"),
+  new Word("June", "ろく がつ"),
+  new Word("July", "しち がつ"),
+  new Word("August", "はち がつ"),
+  new Word("September", "く がつ"),
+  new Word("October", "じゅう がつ"),
+  new Word("November", "じゅういち がつ"),
+  new Word("December", "じゅうに がつ"),
+]
+
+export const Years = [
+  new Word("2015", "にせんじゅうごねん"),
+  new Word("2013", "にせんじゅうさんねん"),
+  new Word("2011", "にせんじゅういちねん"),
+  new Word("1998", "せんきゅうひゃくきゅうじゅうはちねん")
 ]

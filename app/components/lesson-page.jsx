@@ -17,6 +17,7 @@ const LessonPage = React.createClass({
       }
 
       links.push(<a href="" onClick={clicky}>{lesson.name}</a>)
+      links.push(<br />)
     });
 
     return (
