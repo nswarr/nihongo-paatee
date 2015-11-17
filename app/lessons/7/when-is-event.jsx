@@ -1,5 +1,5 @@
 import React from 'react'
-import { DaysOfWeek, DaysOfMonth, Months, Years } from '../../vocab/dates.js'
+import { DaysOfWeek, DaysOfMonth, Months, Year, When } from '../../vocab/dates.js'
 import { Events } from '../../vocab/events.js'
 import { pickRandomItem, getRandomNumber } from '../../lib/rando'
 import VocabWord from '../../components/vocab-word.jsx'
@@ -12,25 +12,25 @@ const WhenIsEvent = React.createClass({
 
   render () {
     let event = pickRandomItem(Events);
-    var whenText;
     var when;
 
-    switch(getRandomNumber(0, 3)) {
+    switch(getRandomNumber(0, 4)) {
       case 0:
-        whenText = "Day of the week"
         when = pickRandomItem(DaysOfWeek)
         break
       case 1:
-        whenText = 'Day of the month'
-        when = pickRandomItem(DaysOfMonth)
+        var dayOfMonth = pickRandomItem(DaysOfMonth)
+        var month = pickRandomItem(Months)
+        when = new Word(month.english + ' ' + dayOfMonth.english, month.nihongo + ' ' + dayOfMonth.nihongo)
         break;
       case 2:
-        whenText = 'Month'
         when = pickRandomItem(Months)
         break;
       case 3:
-        whenText = 'Year'
         when = pickRandomItem(Years)
+        break;
+      case 4:
+        when = pickRandomItem(When)
         break;
     }
 
@@ -44,7 +44,7 @@ const WhenIsEvent = React.createClass({
             <VocabWord word={event} />
           </div>
           <div className="vocab-box">
-            <h4>{whenText}</h4>
+            <h4>When</h4>
             <VocabWord word={when} />
           </div>
         </div>

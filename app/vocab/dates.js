@@ -65,3 +65,20 @@ export const Years = [
   new Word("2011", "にせんじゅういちねん"),
   new Word("1998", "せんきゅうひゃくきゅうじゅうはちねん")
 ]
+
+export const When = [
+  new Word('yesterday', 'きのう'),
+  new Word('today', 'きょう'),
+  new Word('tomorrow', 'あした'),
+  new Word('day after tomorrow', 'あさって'),
+  new Word('last week', 'せんしゅう'),
+  new Word('this week', 'こんしゅう'),
+  new Word('next week', 'らいしゅう'),
+  new Word('two months ago', 'せんせんげつ'),
+  new Word('last month', 'せえんげつ'),
+  new Word('this month', 'こんげつ'),
+  new Word('next month', 'らいげつ'),
+  new Word('last year', 'きょねん'),
+  new Word('this year', 'ことし'),
+  new Word('next year', 'らいねん')
+];
