@@ -2,9 +2,11 @@
   "name": "nihongo-paatee",
   "version": "1.0.0",
   "description": "Helping me learn japanese through practice",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev-start": "gulp server",
+    "postinstall": "./node_modules/gulp/bin/gulp.js build"
   },
   "author": "Nick Swarr <nswarr@gmail.com>",
   "license": "ISC",
