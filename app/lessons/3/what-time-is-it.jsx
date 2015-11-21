@@ -46,7 +46,7 @@ const WhatTimeIsIt = React.createClass({
       <div>
         <div className="row">
           <div className="col-md-9">
-            <h3>いま　なんじ　ですか。</h3>
+            <h3>いまなんじですか。</h3>
             Say the time below
           </div>
         </div>

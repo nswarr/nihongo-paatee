@@ -1,21 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React, { PropTypes } from 'react'
+import LessonPage from '../../components/lesson-page.jsx'
 
 const Index = React.createClass({
   render () {
+
+    let practice = [
+      { name: 'What time is it?', component: require('./what-time-is-it.jsx') },
+      { name: 'Start/End Open/Close', component: require('./when-does-x-start-end.jsx') }
+    ];
+
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-2 practice-menu">
-            <h4>Practice</h4>
-            <Link to="/lesson-3/what-time-is-it">いま　なんじ　ですか</Link>　<br />
-            <Link to="/lesson-3/when-does-x-start-end">なんじ から なんじ まで ですか</Link>
-          </div>
-          <div className="col-md-offset-1 col-md-9">
-            {this.props.children}
-          </div>
-        </div>
-      </div>
+      <LessonPage lessons={practice} />
     )
   }
 })

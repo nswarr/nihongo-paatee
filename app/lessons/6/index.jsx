@@ -1,20 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router'
+export default Index
+
+import React, { PropTypes } from 'react'
+import LessonPage from '../../components/lesson-page.jsx'
 
 const Index = React.createClass({
   render () {
+
+    let practice = [
+      { name: 'Going places', component: require('./going-places.jsx') }
+    ];
+
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-2 practice-menu">
-            <h4>Practice</h4>
-            <Link to="/lesson-6/going-places">Going places</Link>　<br />
-          </div>
-          <div className="col-md-offset-1 col-md-9">
-            {this.props.children}
-          </div>
-        </div>
-      </div>
+      <LessonPage lessons={practice} />
     )
   }
 })
