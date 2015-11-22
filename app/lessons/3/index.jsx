@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import LessonPage from '../../components/lesson-page.jsx'
+import LessonIndex from '../../components/lesson-index.jsx'
 
 const Index = React.createClass({
   render () {
@@ -10,7 +10,7 @@ const Index = React.createClass({
     ];
 
     return (
-      <LessonPage lessons={practice} />
+      <LessonIndex lessons={practice} />
     )
   }
 })

@@ -5,7 +5,6 @@ import { events, places } from './data/vocab'
 const WhatTimesDoesXStartEnd = React.createClass({
   generateTimesAndPlace() {
 
-
     let usePlace = getRandomNumber(0,1) == 1
     let instructions
 

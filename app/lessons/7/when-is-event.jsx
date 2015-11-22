@@ -1,7 +1,8 @@
 import React from 'react'
-import { DaysOfWeek, DaysOfMonth, Months, Year, When } from '../../vocab/dates.js'
+import { DaysOfWeek, DaysOfMonth, Months, Years, When } from '../../vocab/dates.js'
 import { Events } from '../../vocab/events.js'
 import { pickRandomItem, getRandomNumber } from '../../lib/rando'
+import Word from '../../lib/word'
 import VocabWord from '../../components/vocab-word.jsx'
 
 
