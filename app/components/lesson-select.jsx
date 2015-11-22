@@ -3,17 +3,24 @@ import { History } from 'react-router'
 
 const LessonSelect = React.createClass({
   mixins: [History],
-  goToLesson(e) {
-    this.history.pushState(null, `/lesson-${event.target.value}`)
+  goToLesson(lessonNumber) {
+    return (e) => {
+      e.preventDefault()
+      this.history.pushState(null, `/lesson-${lessonNumber}`)
+    }
   },
   render () {
     return (
-      <select onChange={this.goToLesson}>
-        <option value="">Choose a lesson</option>
-        <option value="3">Lesson 3</option>
-        <option value="6">Lesson 6</option>
-        <option value="7">Lesson 7</option>
-      </select>
+      <div ref="dropdown" className="dropdown">
+        <button className="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+          Choose a lesson
+        </button>
+        <div className="dropdown-menu">
+          <a href="#" className="dropdown-item" onClick={this.goToLesson(3)}>Lesson 3</a>
+          <a href="#" className="dropdown-item" onClick={this.goToLesson(6)}>Lesson 6</a>
+          <a href="#" className="dropdown-item" onClick={this.goToLesson(7)}>Lesson 7</a>
+        </div>
+      </div>
     )
   }
 })

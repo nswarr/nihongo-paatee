@@ -36,6 +36,7 @@ gulp.task("concat-vendor-css", function() {
 
 gulp.task("concat-vendor-js", function() {
   return gulp.src([
+      'vendor/jquery-2.1.4.min.js',
       'vendor/bootstrap-4-alpha/bootstrap.js'
     ])
     .pipe(concat('vendor.js'))
