@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LessonPage = React.createClass({
+const LessonIndex = React.createClass({
   getInitialState() {
     return {
       selectedPracticeIndex: 0
@@ -9,18 +9,23 @@ const LessonPage = React.createClass({
 
   render () {
     let links = [];
+    let lessons = this.props.children;
 
-    this.props.lessons.forEach((lesson, i) => {
+    // If there's only one child, there's no array.  It's a react thing.
+    if(!lessons.length) {
+      lessons = [lessons]
+    }
+
+    lessons.forEach((lesson, i) => {
       var clicky = (e) => {
         e.preventDefault()
         this.setState({selectedPracticeIndex: i})
       }
 
-      links.push(<a key={lesson.name} href="" onClick={clicky}>{lesson.name}</a>)
-      links.push(<br />)
+      links.push(<a key={lesson.props.name} href="" onClick={clicky}>{lesson.props.name}</a>)
     });
 
-    var Practice = this.props.lessons[this.state.selectedPracticeIndex].component;
+    var Practice = lessons[this.state.selectedPracticeIndex].props.component;
 
     return (
       <div className="container">
@@ -38,4 +43,4 @@ const LessonPage = React.createClass({
   }
 })
 
-export default LessonPage
+export default LessonIndex

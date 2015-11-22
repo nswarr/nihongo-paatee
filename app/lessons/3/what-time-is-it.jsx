@@ -55,12 +55,12 @@ const WhatTimeIsIt = React.createClass({
             {time}
           </div>
         </div>
-        {answer}
         <div className="row">
           <div className="col-md-9">
             {buttons}
           </div>
         </div>
+        {answer}
       </div>
     )
   },

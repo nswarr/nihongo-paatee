@@ -3,14 +3,11 @@ import LessonIndex from '../../components/lesson-index.jsx'
 
 const Index = React.createClass({
   render () {
-
-    let practice = [
-      { name: 'What time is it?', component: require('./what-time-is-it.jsx') },
-      { name: 'Start/End Open/Close', component: require('./when-does-x-start-end.jsx') }
-    ];
-
     return (
-      <LessonIndex lessons={practice} />
+      <LessonIndex>
+        <lesson name="What time is it?" component={require('./what-time-is-it.jsx')} />
+        <lesson name="Start/End Open/Close" component={require('./when-does-x-start-end.jsx')} />
+      </LessonIndex>
     )
   }
 })
