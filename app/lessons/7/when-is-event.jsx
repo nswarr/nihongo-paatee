@@ -1,6 +1,6 @@
 import React from 'react'
-import { DaysOfWeek, DaysOfMonth, Months, Years, When } from '../../vocab/dates.js'
-import { Events } from '../../vocab/events.js'
+import { DaysOfWeek, DaysOfMonth, Months, Years, When } from '../../vocab/dates'
+import { Events } from '../../vocab/events'
 import { pickRandomItem, getRandomNumber } from '../../lib/rando'
 import Word from '../../lib/word'
 import VocabWord from '../../components/vocab-word.jsx'
@@ -8,12 +8,12 @@ import VocabWord from '../../components/vocab-word.jsx'
 
 const WhenIsEvent = React.createClass({
   again() {
-    this.setState({});
+    this.setState({})
   },
 
   render () {
-    let event = pickRandomItem(Events);
-    var when;
+    let event = pickRandomItem(Events)
+    let when;
 
     switch(getRandomNumber(0, 4)) {
       case 0:

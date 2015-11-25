@@ -1,12 +1,12 @@
 import React from 'react'
-import { DaysOfWeek } from '../../vocab/dates.js'
+import { DaysOfWeek } from '../../vocab/dates'
 import { pickRandomItem } from '../../lib/rando'
 import VocabWord from '../../components/vocab-word.jsx'
 
 
 const DaysOfTheWeek = React.createClass({
   again() {
-    this.setState({});
+    this.setState({})
   },
   toggleFirstTen() {
     this.setState({isFirstTen: !this.state.isFirstTen});

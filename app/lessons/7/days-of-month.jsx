@@ -1,5 +1,5 @@
 import React from 'react'
-import { DaysOfMonth } from '../../vocab/dates.js'
+import { DaysOfMonth } from '../../vocab/dates'
 import { pickRandomItem, getRandomNumber } from '../../lib/rando'
 import VocabWord from '../../components/vocab-word.jsx'
 
@@ -9,16 +9,16 @@ const DaysOfTheMonth = React.createClass({
     return { isFirstTen: false }
   },
   again() {
-    this.setState({});
+    this.setState({})
   },
   toggleFirstTen() {
-    this.setState({isFirstTen: !this.state.isFirstTen});
+    this.setState({isFirstTen: !this.state.isFirstTen})
   },
   render () {
-    var dayOfMonth= pickRandomItem(DaysOfMonth);
+    var dayOfMonth= pickRandomItem(DaysOfMonth)
 
     if(this.state.isFirstTen) {
-      dayOfMonth = DaysOfMonth[getRandomNumber(0,9)];
+      dayOfMonth = DaysOfMonth[getRandomNumber(0,9)]
     }
 
     return (

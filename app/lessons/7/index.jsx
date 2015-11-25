@@ -9,6 +9,7 @@ const Index = React.createClass({
         <lesson name="Days of the month" component={require('./days-of-month.jsx')} />
         <lesson name="State event occurance" component={require('./when-is-event.jsx')} />
         <lesson name="Ask event occurance" component={require('./ask-answer-date.jsx')} />
+        <lesson name="Ask about travel" component={require('./ask-answer-traveling.jsx')} />
       </LessonIndex>
     )
   }
